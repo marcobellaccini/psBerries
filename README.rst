@@ -14,4 +14,14 @@ You can change the target OU and the event to query by modifying the variables a
 
 This script requires PowerShell 4.0 or later.
 
+wsBackupPurgeNotify
+--------------------
+A PowerShell script to automate backup management, using Windows Server Backup Cmdlets.
+
+Run it through a scheduled task: it will handle backup execution, logging, old backup purge and e-mail notifications.
+
+You can use it to backup to network shared folders too.
+
+It requires the WindowsServerBackup PowerShell module and PowerShell 3.0 or later.
+
 .. _Creative Commons CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/legalcode
