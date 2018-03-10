@@ -99,6 +99,11 @@ Start-WBBackup -Policy $wbpolicy -Force | Out-File $backupdellog -Append -NoClob
 
 ## Check if backup succeeded
 
+# wait for backup status to be updated (that's awful, but necessary)
+while ((Get-WbJob).JobType -ne [Microsoft.Windows.ServerBackup.Commands.WBJobType]::None) {
+    Start-Sleep -s 5
+}
+
 # get backup details
 $backjob = Get-WBJob -Previous 1
 # if backup was not performed (i.e.: backup start time did not change)
