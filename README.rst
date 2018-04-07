@@ -24,4 +24,21 @@ You can use it to backup to network shared folders too.
 
 It requires the WindowsServerBackup PowerShell module and PowerShell 3.0 or later.
 
+wsusRoboMaintenance
+--------------------
+A PowerShell script to automate Windows Server Update Services (WSUS) maintenance.
+
+It handles database backup/re-indexing and WSUS cleanup.
+
+It assumes that Windows Internal Database (WID) is used for SUSDB.
+
+Support for logging, old backups purge and e-mail notifications is included.
+
+It is meant to be run through a scheduled task.
+
+The service user running the task should be member of the local Administrators group.
+
+The script requires SqlServer PowerShell module (you can install it with: *Install-Module -Name SqlServer*) and PowerShell 5.0 or later.
+
+
 .. _Creative Commons CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/legalcode
