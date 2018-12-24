@@ -40,5 +40,19 @@ The service user running the task should be member of the local Administrators g
 
 The script requires SqlServer PowerShell module (you can install it with: *Install-Module -Name SqlServer*) and PowerShell 5.0 or later.
 
+easyiLO
+--------------------
+`CVE-2017-12542 <https://nvd.nist.gov/vuln/detail/CVE-2017-12542>`_ exploit in PowerShell:
+
+creates a new iLO administrative user without authentication.
+
+Works with HP iLO 4 < 2.53
+
+Usage example:
+
+``easyiLO.ps1 https://10.0.0.3 newadmin newpassword``
+
+It requires PowerShell 5.1 or later.
+
 
 .. _Creative Commons CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/legalcode
