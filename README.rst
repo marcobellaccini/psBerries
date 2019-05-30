@@ -54,5 +54,17 @@ Usage example:
 
 It requires PowerShell 5.1 or later.
 
+remoteVTChecker
+--------------------
+A PowerShell script to check all processes of a remote server on `VirusTotal <https://www.virustotal.com/>`_.
+
+Process hashes are computed server-side and sent to the client (the local computer).
+
+Then, the client checks the hashes on VirusTotal.
+
+This means that this will work even if the remote computer is missing Internet connection.
+
+It requires PowerShell 4.0 or later both server and client side.
+
 
 .. _Creative Commons CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/legalcode
